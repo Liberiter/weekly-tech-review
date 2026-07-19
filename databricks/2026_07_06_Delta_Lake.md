@@ -1,6 +1,6 @@
 # 2026-07-06. Delta Lake — "그냥 파일 더미"가 어떻게 '테이블'이 되는가
 
-> 지난주 그림의 **1층(저장 포맷)**을 확대한다. Databricks의 심장인 Delta Lake는, 사실 놀랍도록 단순한 아이디어 하나로 시작한다.
+> 레이크하우스의 맨 아래 **저장 포맷** 층을 확대한다. Databricks의 심장인 Delta Lake는, 사실 놀랍도록 단순한 아이디어 하나로 시작한다.
 >
 > **Parquet 파일 더미 + 트랜잭션 로그 한 폴더.** 이 조합이 왜 "데이터 레이크 위의 데이터베이스"를 가능하게 하는지 밑바닥부터 뜯어본다.
 
@@ -150,7 +150,7 @@ WHEN MATCHED THEN UPDATE SET *
 WHEN NOT MATCHED THEN INSERT *;
 ```
 
-이 한 구문이 **CDC(변경 데이터 캡처) 파이프라인의 핵심**이다. 소스 DB의 변경분을 받아 레이크하우스에 반영하는 일 — 다음 주 Medallion·Lakeflow 주제에서 바로 이어진다.
+이 한 구문이 **CDC(변경 데이터 캡처) 파이프라인의 핵심**이다. 소스 DB의 변경분을 받아 레이크하우스에 반영하는 일 — ETL 파이프라인 설계의 심장이 바로 이 `MERGE`다.
 
 ---
 
@@ -176,7 +176,7 @@ WHEN NOT MATCHED THEN INSERT *;
 
 ## 7. UniForm — Iceberg와의 화해
 
-지난주 1층에서 봤던 떡밥: **"Databricks가 왜 경쟁 포맷 Iceberg까지 껴안았나."** 그 기술적 접점이 바로 **UniForm(Universal Format)**이다.
+여기서 한 가지 흥미로운 질문: **"Databricks가 왜 경쟁 포맷 Iceberg까지 껴안았나."** 그 기술적 접점이 바로 **UniForm(Universal Format)**이다.
 
 - Delta로 데이터를 쓰면, UniForm이 **Iceberg용 메타데이터를 자동으로 함께 생성**한다.
 - 데이터 파일(Parquet)은 어차피 공통이다. 차이는 **로그·메타데이터 계층뿐**이다. 그래서 "같은 Parquet에 Iceberg 메타데이터도 하나 더 얹어주면", Snowflake·Trino 같은 외부 엔진이 **같은 데이터를 Iceberg 테이블로 읽는다.**
@@ -184,7 +184,7 @@ WHEN NOT MATCHED THEN INSERT *;
 > 한 번 쓰고, Delta로도 Iceberg로도 읽힌다.
 > 포맷 전쟁을 "둘 다 지원"으로 우회한 실용적 한 수.
 
-이게 지난주 결론 — **"우리는 포맷이 아니라 그 위의 지능을 판다"** — 의 실제 구현체다. 8주차에서 Delta vs Iceberg를 정면 비교할 때 이 지점을 다시 펼친다.
+이게 Databricks의 전략 — **"우리는 포맷이 아니라 그 위의 지능을 판다"** — 의 실제 구현체다. "열린 포맷 전쟁"을 정면 대결 대신 "둘 다 지원"으로 우회한 셈이다.
 
 ---
 
@@ -195,7 +195,7 @@ WHEN NOT MATCHED THEN INSERT *;
 - Delta Lake = **평범한 Parquet + `_delta_log` 트랜잭션 로그.** "파일 목록이 아니라 로그가 테이블을 정의한다"가 전부의 열쇠.
 - 로그 구조 하나에서 **ACID(낙관적 동시성) · 타임트래블 · 스키마 관리 · MERGE/CDC**가 전부 파생된다.
 - 로그에 담긴 **통계(min/max)**가 data skipping을, **OPTIMIZE·Z-Order·Liquid Clustering·Deletion Vectors**가 성능을 책임진다.
-- **UniForm**으로 Iceberg와도 호환 — 지난주 "포맷 종속 해제"의 실체.
+- **UniForm**으로 Iceberg와도 호환 — "포맷 종속 해제"의 실체.
 
 **우리 SI 프로젝트에 주는 시사점 (토론 포인트):**
 

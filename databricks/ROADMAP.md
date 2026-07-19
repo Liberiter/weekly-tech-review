@@ -11,13 +11,14 @@
 | 주차 | 날짜 | 주제 | 축 | 한 줄 | 상태 |
 |----|------|------|----|------|------|
 | 1 | 2026-06-29 | Data Intelligence Platform 조감도 | Databricks | 5층 구조로 읽는 플랫폼의 야망 | ✅ 완료 |
-| 2 | 2026-07-06 | **Delta Lake 뜯어보기** | DE 기초 | Parquet + 트랜잭션 로그 = 왜 '테이블'이 되나 | 🔜 이번 주 |
-| 3 | | Medallion Architecture | DE 기초 | Bronze→Silver→Gold, 파이프라인 설계 국룰 | ⬜ |
-| 4 | | Unity Catalog | Databricks | catalog.schema.table 3단 거버넌스 | ⬜ |
-| 5 | | Lakeflow / DLT | Databricks | 선언형 ETL, 코드를 어떻게 줄이나 | ⬜ |
-| 6 | | DBSQL & Photon | Databricks | 레이크 위에서 웨어하우스 성능 내는 법 | ⬜ |
-| 7 | | Databricks Assistant / Genie | 체험형 | 자연어로 데이터 다루기, 실제 써보니 | ⬜ |
-| 8 | | Delta Lake vs Iceberg | 트렌드 | 요즘 뜨거운 '열린 포맷 전쟁' | ⬜ |
+| 2 | 2026-07-06 | **Delta Lake 뜯어보기** | DE 기초 | Parquet + 트랜잭션 로그 = 왜 '테이블'이 되나 | ✅ 완료 |
+| 3 | 2026-07-13 | Medallion Architecture | DE 기초 | Bronze→Silver→Gold, 파이프라인 설계 국룰 | ✅ 완료 (정리본 보유) |
+| 4 | 2026-07-20 | **데이터 모델링** | DE 기초 | Star Schema·차원 모델링, Grain과 SCD | 🔜 이번 주 |
+| 5 | | Unity Catalog | Databricks | catalog.schema.table 3단 거버넌스 | ⬜ |
+| 6 | | Lakeflow / DLT | Databricks | 선언형 ETL, 코드를 어떻게 줄이나 | ⬜ |
+| 7 | | DBSQL & Photon | Databricks | 레이크 위에서 웨어하우스 성능 내는 법 | ⬜ |
+| 8 | | Databricks Assistant / Genie | 체험형 | 자연어로 데이터 다루기, 실제 써보니 | ⬜ |
+| 9 | | Delta Lake vs Iceberg | 트렌드 | 요즘 뜨거운 '열린 포맷 전쟁' | ⬜ |
 
 ---
 
@@ -32,7 +33,7 @@
 ### 데이터 엔지니어링 기초 계열 (플랫폼 무관, 팀 기본기)
 - **배치 vs 스트리밍** — Structured Streaming 맛보기
 - **파티셔닝 & 파일 최적화** — small file problem, Z-ordering
-- **데이터 모델링** — Star Schema, dimensional modeling
+- ~~**데이터 모델링** — Star Schema, dimensional modeling~~ → 3주차로 편성 완료
 - **데이터 품질** — Great Expectations / DLT expectations
 
 ### 시야 넓히기

@@ -13,12 +13,13 @@
 | 1 | 2026-06-29 | Data Intelligence Platform 조감도 | Databricks | 5층 구조로 읽는 플랫폼의 야망 | ✅ 완료 |
 | 2 | 2026-07-06 | **Delta Lake 뜯어보기** | DE 기초 | Parquet + 트랜잭션 로그 = 왜 '테이블'이 되나 | ✅ 완료 |
 | 3 | 2026-07-13 | Medallion Architecture | DE 기초 | Bronze→Silver→Gold, 파이프라인 설계 국룰 | ✅ 완료 (정리본 보유) |
-| 4 | 2026-07-20 | **데이터 모델링** | DE 기초 | Star Schema·차원 모델링, Grain과 SCD | 🔜 이번 주 |
-| 5 | | Unity Catalog | Databricks | catalog.schema.table 3단 거버넌스 | ⬜ |
-| 6 | | Lakeflow / DLT | Databricks | 선언형 ETL, 코드를 어떻게 줄이나 | ⬜ |
-| 7 | | DBSQL & Photon | Databricks | 레이크 위에서 웨어하우스 성능 내는 법 | ⬜ |
-| 8 | | Databricks Assistant / Genie | 체험형 | 자연어로 데이터 다루기, 실제 써보니 | ⬜ |
-| 9 | | Delta Lake vs Iceberg | 트렌드 | 요즘 뜨거운 '열린 포맷 전쟁' | ⬜ |
+| 4 | 2026-07-20 | **데이터 모델링** | DE 기초 | Star Schema·차원 모델링, Grain과 SCD | ✅ 완료 |
+| 5 | 2026-07-27 | **dbt** | DE 기초 | ELT의 'T', ref()로 엮는 변환 파이프라인 | 🔜 이번 주 |
+| 6 | | Unity Catalog | Databricks | catalog.schema.table 3단 거버넌스 | ⬜ |
+| 7 | | Lakeflow / DLT | Databricks | 선언형 ETL, 코드를 어떻게 줄이나 | ⬜ |
+| 8 | | DBSQL & Photon | Databricks | 레이크 위에서 웨어하우스 성능 내는 법 | ⬜ |
+| 9 | | Databricks Assistant / Genie | 체험형 | 자연어로 데이터 다루기, 실제 써보니 | ⬜ |
+| 10 | | Delta Lake vs Iceberg | 트렌드 | 요즘 뜨거운 '열린 포맷 전쟁' | ⬜ |
 
 ---
 

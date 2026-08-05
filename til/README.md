@@ -38,3 +38,4 @@
 |---|---|---|
 | 2026-08-04 | [DAB (Declarative Automation Bundles)](2026_08_04_DAB.md) | 노트북을 "배포 가능한 프로젝트"로 바꾸는 YAML 한 장 |
 | 2026-08-04 | [SDP (Spark Declarative Pipelines)](2026_08_04_SDP.md) | "테이블이 어떠해야 하는지"만 쓰고 DAG는 안 쓴다 |
+| 2026-08-05 | [YAML](2026_08_05_YAML.md) | 들여쓰기 두 칸으로 인프라를 기술하는 언어, 그리고 그 대가 |

@@ -40,3 +40,4 @@
 | 2026-08-04 | [SDP (Spark Declarative Pipelines)](2026_08_04_SDP.md) | "테이블이 어떠해야 하는지"만 쓰고 DAG는 안 쓴다 |
 | 2026-08-05 | [YAML](2026_08_05_YAML.md) | 들여쓰기 두 칸으로 인프라를 기술하는 언어, 그리고 그 대가 |
 | 2026-08-05 | [PM님께 물은 것 5개 (Q&A)](2026_08_05_PM_QnA.md) | 개인정보 마스킹·Jira·배포 실패·direct 엔진·번들 분할 |
+| 2026-08-06 | [PM님께 물은 것 8개 (Q&A)](2026_08_06_PM_QnA.md) | Redshift gold 적재·cluster_id·for_each 실패·metric view·성공 알림 |

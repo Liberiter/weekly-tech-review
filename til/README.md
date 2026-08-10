@@ -42,3 +42,4 @@
 | 2026-08-05 | [PM님께 물은 것 5개 (Q&A)](2026_08_05_PM_QnA.md) | 개인정보 마스킹·Jira·배포 실패·direct 엔진·번들 분할 |
 | 2026-08-06 | [PM님께 물은 것 8개 (Q&A)](2026_08_06_PM_QnA.md) | Redshift gold 적재·cluster_id·for_each 실패·metric view·성공 알림 |
 | 2026-08-07 | [배포·ETL·플랫폼 구조](2026_08_07_DAB_ETL_Platform.md) | 번들·write_mode·metric view materialization·control/compute plane |
+| 2026-08-10 | [PM님께 물은 것 6개 (Q&A)](2026_08_10_PM_QnA.md) | 빈 노트북·시크릿 스코프·증분 시간창·dbt 버전·Federation·UTC 변환 |

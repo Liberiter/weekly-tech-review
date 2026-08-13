@@ -44,3 +44,4 @@
 | 2026-08-07 | [배포·ETL·플랫폼 구조](2026_08_07_DAB_ETL_Platform.md) | 번들·write_mode·metric view materialization·control/compute plane |
 | 2026-08-10 | [PM님께 물은 것 6개 (Q&A)](2026_08_10_PM_QnA.md) | 빈 노트북·시크릿 스코프·증분 시간창·dbt 버전·Federation·UTC 변환 |
 | 2026-08-12 | [PM님께 물은 것 4개 (Q&A)](2026_08_12_PM_QnA.md) | lookback 28시간·anti join 멱등성·두 오케스트레이터·Airflow 버전·시간 결합 vs 신호 결합 |
+| 2026-08-13 | [PM님께 물은 것 5개 + 기타 3 (Q&A)](2026_08_13_PM_QnA.md) | 내부망 GitLab CI·SQL warehouse 선택·모델링 동결·Metric View와 dbt 경계·for_each → dbt 모델·백필과 full-refresh |
